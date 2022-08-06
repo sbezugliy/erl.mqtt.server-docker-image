@@ -27,7 +27,7 @@ RUN git clone $APP_SRC_URL .
 
 RUN $REBAR3_BIN do version,compile 
 
-COPY ./endpoint /sbin/endpoint
-RUN chmod +x /sbin/endpoint
+COPY ./entrypoint /sbin/entrypoint
+RUN chmod +x /sbin/entrypoint
 
-ENTRYPOINT [ "sbin", "entrypoint" ]
+ENTRYPOINT [ "/sbin/entrypoint" ]
