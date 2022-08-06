@@ -30,4 +30,4 @@ RUN $REBAR3_BIN do version,compile
 COPY ./endpoint /sbin/endpoint
 RUN chmod +x /sbin/endpoint
 
-CMD /sbin/endpoint
+ENTRYPOINT [ "sbin", "entrypoint" ]
